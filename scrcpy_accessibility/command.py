@@ -1,6 +1,5 @@
 import os
 from PyQt6.QtCore import QObject, pyqtSlot, pyqtSignal, QThread
-from PyQt6.QtWidgets import QMessageBox
 import subprocess
 
 ADB_DIR = 'C:\\Users\\lombo\\Downloads\\scrcpy-win64-v2.4\\scrcpy-win64-v2.4'
