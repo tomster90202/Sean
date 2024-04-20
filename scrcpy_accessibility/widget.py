@@ -35,6 +35,9 @@ class MainWidget(QWidget):
         button = QPushButton("Open WYZE")
         button.clicked.connect(self.command_maker.open_wyze)
         layout.addWidget(button)
+        button = QPushButton("Open CSC Go")
+        button.clicked.connect(self.command_maker.open_csc_go)
+        layout.addWidget(button)
 
         self.setLayout(layout)
 
