@@ -104,6 +104,10 @@ class CommandMaker(QObject):
     def open_wyze(self):
         self.command_signal.emit('WYZE', 'am start -n com.hualai/com.hualai.home.SmartHomeMainActivity')
     
+    @pyqtSlot()
+    def open_csc_go(self):
+        self.command_signal.emit('CSC Go', 'am start -n com.cscsw.cscgo/com.mycscgo.laundry.general.ui.MainActivity')
+    
     def swipe(self, x1: int, y1: int, x2: int, y2: int):
         self.command_signal.emit('swipe', f'input touchscreen swipe {x1} {y1} {x2} {y2}')
     
