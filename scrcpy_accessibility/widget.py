@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QGridLayout, QLabel, QMainWindow, QPushButton, QWidget
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QFont
 
 from command import CommandMaker
 
@@ -13,7 +14,7 @@ class SwiperWidget(QWidget):
         layout = QGridLayout()
         
         button = QPushButton()
-        button.setFixedSize(70, 65)
+        button.setFixedSize(100, 65)
         self.create_label_in_button(button, "Swipe Up", "↑")
         button.clicked.connect(self.command_maker.swipe_up)
         layout.addWidget(button, 0, 1, Qt.AlignmentFlag.AlignCenter)
@@ -58,16 +59,24 @@ class MainWidget(QWidget):
 
         button = QPushButton("Wake Phone Up")
         button.clicked.connect(self.command_maker.wake_phone_up)
+        button.setFixedSize(175, 100)
+        button.setFont(QFont('Arial', 15))
         layout.addWidget(button, 0, 0)
         layout.addWidget(SwiperWidget(), 0, 1, 1, 2)
         button = QPushButton("Open EZ Fare")
         button.clicked.connect(self.command_maker.open_ez_fare)
+        button.setFixedSize(175, 100)
+        button.setFont(QFont('Arial', 15))
         layout.addWidget(button)
         button = QPushButton("Open WYZE")
         button.clicked.connect(self.command_maker.open_wyze)
+        button.setFixedSize(175, 100)
+        button.setFont(QFont('Arial', 15))
         layout.addWidget(button)
         button = QPushButton("Open CSC Go")
         button.clicked.connect(self.command_maker.open_csc_go)
+        button.setFixedSize(175, 100)
+        button.setFont(QFont('Arial', 15))
         layout.addWidget(button)
 
         self.setLayout(layout)
