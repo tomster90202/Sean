@@ -76,6 +76,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("scrcpy Accessibility")
+        self.move(0, 0)
         self.setCentralWidget(MainWidget())
     
    
